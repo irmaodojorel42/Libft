@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/27 13:04:49 by marvin            #+#    #+#             */
-/*   Updated: 2023/02/27 13:04:49 by marvin           ###   ########.fr       */
+/*   Created: 2023/03/01 11:44:23 by marvin            #+#    #+#             */
+/*   Updated: 2023/03/01 11:44:23 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+#include <string.h>
+
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-    if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-        return (1);
+    size_t i;
+
+    i = 0;
+    while (s1[i] != '\0' && i < n)
+    {
+        if (s1[i] != s2[i])
+            return (s1[i] - s2[i]);
+        i++;
+    }
     return (0);
 }
