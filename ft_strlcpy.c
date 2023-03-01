@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/01 11:31:36 by marvin            #+#    #+#             */
-/*   Updated: 2023/03/01 11:31:36 by marvin           ###   ########.fr       */
+/*   Created: 2023/03/01 18:50:18 by marvin            #+#    #+#             */
+/*   Updated: 2023/03/01 18:50:18 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
+#include    <string.h>
+#include    "libft.h"
 
-int main(void)
+size_t  ft_strlcpy(char *dst, const char *src, size_t size)
 {
-    char    c[10];
-    const char *s1 = "casa";
+    size_t  i;
+    size_t  j;
 
-    printf("%zd\n", ft_strlcpy(c, s1, 2));
-    return (0);
+    j = ft_strlen(src);
+    i = 0;
+    while (i < size - 1)
+    {
+            dst[i] = src[i];
+            i++;
+    }
+    dst[i] = '\0';
+    return (j);
 }
