@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/01 11:31:36 by marvin            #+#    #+#             */
-/*   Updated: 2023/03/01 11:31:36 by marvin           ###   ########.fr       */
+/*   Created: 2023/03/01 21:53:31 by marvin            #+#    #+#             */
+/*   Updated: 2023/03/01 21:53:31 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <string.h>
 #include "libft.h"
 
-int main(void)
+size_t  ft_strlcat(char *dst, const char *src, size_t size)
 {
-    char    dst[20] = "casa";
-    const char  *src = "amarela";
+    size_t  i;
+    size_t  j;
 
-    printf("%zd\n", ft_strlcat(dst, src, 3));
+    i = ft_strlen(dst);
+    j = 0;
+    while (src[j] && j < size)
+        dst[i++] = src[j++];
+    dst[i] = '\0';
+    return (i);
 }
