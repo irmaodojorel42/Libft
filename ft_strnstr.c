@@ -20,7 +20,7 @@ char	*ft_strnstr(const char *str, const char *find, size_t n)
 	i = 0;
 	j = 0;
 	if (find[j] == '\0')
-		return ((char * )str);
+		return ((char *)str);
 	while (str[i] != '\0' && i < n)
 	{
 		while (str[i] == find[j] && i < n)
@@ -37,6 +37,9 @@ char	*ft_strnstr(const char *str, const char *find, size_t n)
 	}
 	return (0);
 }
+
+
+
 
 /*#include <stdio.h>
 #include "libft.h"
