@@ -25,3 +25,15 @@ size_t  ft_strlcat(char *dst, const char *src, size_t size)
     dst[i] = '\0';
     return (i);
 }
+
+/*#include <stdio.h>
+#include "libft.h"
+
+int main(void)
+{
+    char    dst[20] = "casa";
+    const char  *src = "amarela";
+
+    printf("%zd\n", ft_strlcat(dst, src, 3));
+    return (0);
+}*/
