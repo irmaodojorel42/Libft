@@ -25,3 +25,16 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
     }
     return (0);
 }
+
+/*#include <stdio.h>
+#include "libft.h"
+
+int main(void)
+{
+    const char  *s1 = "casa";
+    const char  *s2 = "caSa";
+
+    printf("%d\n", ft_strncmp(s1, s2, 5)); //n > diff
+    printf("%d\n", ft_strncmp(s1, s2, 2)); //n < diff
+    return (0);
+}*/

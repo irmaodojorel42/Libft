@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/27 18:48:09 by marvin            #+#    #+#             */
-/*   Updated: 2023/02/27 18:48:09 by marvin           ###   ########.fr       */
+/*   Created: 2023/03/02 10:04:27 by marvin            #+#    #+#             */
+/*   Updated: 2023/03/02 10:04:27 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  ft_strlen(const char *s)
+void    *ft_memcpy(void *dest, const void *src, size_t n)
 {
-    size_t  i;
+    char    *d;
+    const char  *s;
+    int i;
 
     i = 0;
-    while (s[i] != '\0')
+    d = (char *)dest;
+    s = (const char *)src;
+    while (n > 0)
+    {
+        d[i] = s[i];
         i++;
-    return (i);
+        n--;
+    }
+    return (dest);
 }
 
 /*#include <stdio.h>
@@ -27,8 +35,10 @@ size_t  ft_strlen(const char *s)
 
 int main(void)
 {
-    const char *src = "casa";
+    char    dst[20];
+    const char  *src = "amarelo";
 
-    printf("%zd\n", ft_strlen(src));
-    return (0);  
+    ft_memcpy(dst, src, 4);
+    printf("%s\n", dst);
+    return (0);
 }*/

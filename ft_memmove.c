@@ -1,34 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/27 18:48:09 by marvin            #+#    #+#             */
-/*   Updated: 2023/02/27 18:48:09 by marvin           ###   ########.fr       */
+/*   Created: 2023/03/02 10:41:24 by marvin            #+#    #+#             */
+/*   Updated: 2023/03/02 10:41:24 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/*#include "libft.h"
 
-size_t  ft_strlen(const char *s)
+void    *ft_memmove(void *dest, const void *src, size_t n)
 {
-    size_t  i;
+    char    t[];
 
-    i = 0;
-    while (s[i] != '\0')
-        i++;
-    return (i);
-}
 
-/*#include <stdio.h>
-#include "libft.h"
-
-int main(void)
-{
-    const char *src = "casa";
-
-    printf("%zd\n", ft_strlen(src));
-    return (0);  
 }*/

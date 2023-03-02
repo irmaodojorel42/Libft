@@ -30,8 +30,9 @@ void    *ft_memset(void *s, int c, size_t n)
 
 /*int main(void)
 {
-    void    *s = "celsormneto@gmail.com";
+    char    s[50] = "celsormneto@gmail.com";
 
-    printf("%p\n", ft_memset(s, '.', 5));
+    ft_memset(s, '*', 9);
+    printf("%s\n", s);
     return (0);
 }*/

@@ -18,3 +18,15 @@ int ft_isalnum(int c)
         return (1);
     return (0);
 }
+
+/*#include <stdio.h>
+#include "libft.h"
+
+int main(void)
+{
+    printf("alp %d\n", ft_isalnum(122));
+    printf("num %d\n", ft_isalnum(49));
+    printf("not alnum %d\n", ft_isalnum(32));
+
+    return (0);
+}*/

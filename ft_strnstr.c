@@ -43,9 +43,9 @@ char	*ft_strnstr(const char *str, const char *find, size_t n)
 
 int main(void)
 {
-    const char *big = "uma bela casa";
-    const char *little = "bela";
+    const char *src = "uma bela casa";
+    const char *find = "bela";
 
-    printf("%s\n", ft_strnstr(big, little, 20));
+    printf("%s\n", ft_strnstr(src, find, 20));
     return (0);  
 }*/
