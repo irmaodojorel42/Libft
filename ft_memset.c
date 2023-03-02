@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include    <string.h>
-#include    <stdio.h>
+#include "libft.h"
 
 void    *ft_memset(void *s, int c, size_t n)
 {
@@ -29,7 +28,7 @@ void    *ft_memset(void *s, int c, size_t n)
     return (s);
 }
 
-int main(void)
+/*int main(void)
 {
     void    *s = "celsormneto@gmail.com";
 
