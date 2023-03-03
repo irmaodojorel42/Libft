@@ -15,10 +15,10 @@
 
 int main(void)
 {
-    char    s[50] = "celsormneto@gmail.com";
-    char    *x;
+    const char  *s1 = "caSa";
+    const char  *s2 = "casa";
 
-    x = ft_memchr(s, 'o', 6);
-    printf("%s\n", x);
+    printf("%d\n", ft_memcmp(s1, s2, 5)); //n > diff
+    printf("%d\n", ft_memcmp(s1, s2, 2)); //n < diff
     return (0);
 }
