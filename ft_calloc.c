@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/01 21:53:31 by marvin            #+#    #+#             */
-/*   Updated: 2023/03/01 21:53:31 by marvin           ###   ########.fr       */
+/*   Created: 2023/03/05 16:15:36 by marvin            #+#    #+#             */
+/*   Updated: 2023/03/05 16:15:36 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  ft_strlcat(char *dst, const char *src, size_t size)
+void *calloc(size_t nblock, size_t sizeblock)
 {
-    size_t  i;
-    size_t  j;
+    size_t  totalsize;
+    void    *result;
 
-    i = ft_strlen(dst);
-    j = 0;
-    while (src[j] && j < size)
-        dst[i++] = src[j++];
-    dst[i] = '\0';
-    return (i);
+    totalsize = sizeblock * nblock;
+    result = malloc(totalsize);
+    if (result == NULL)
+        return (0);
+    ft_memset(result, 0, totalsize);
+    return (result);
 }
-
-/*#include <stdio.h>
-#include "libft.h"
-
-int main(void)
-{
-    char    dst[20] = "casa";
-    const char  *src = "amarela";
-
-    printf("%zd\n", ft_strlcat(dst, src, 3));
-    return (0);
-}*/
