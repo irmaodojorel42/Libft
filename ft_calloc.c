@@ -12,15 +12,17 @@
 
 #include "libft.h"
 
-void *calloc(size_t nblock, size_t sizeblock)
+void *ft_calloc(size_t nblock, size_t sizeblock)
 {
     size_t  totalsize;
     void    *result;
 
     totalsize = sizeblock * nblock;
+    if (nblock == 0 || sizeblock == 0)
+        return (NULL);
     result = malloc(totalsize);
     if (result == NULL)
-        return (0);
+        return (NULL);
     ft_memset(result, 0, totalsize);
     return (result);
 }

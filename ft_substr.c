@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/02 10:41:24 by marvin            #+#    #+#             */
-/*   Updated: 2023/03/02 10:41:24 by marvin           ###   ########.fr       */
+/*   Created: 2023/03/07 07:24:16 by marvin            #+#    #+#             */
+/*   Updated: 2023/03/07 07:24:16 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/*#include "libft.h"
 
-void    *ft_memmove(void *dest, const void *src, size_t n)
+char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (dest > src)
-	{
-		while (n > 0)
-		{
-			n--;
-			((char *)dest)[n] = ((char *)src)[n];
-		}
-	}
-	else
-		ft_memcpy(dest, src, n);
-	return (dest);
-}
+    char    *sub;
+
+    sub = malloc(ft_strlen(s) - start + 1);
+    if (sub == NULL)
+        return (NULL);
+    ft_memcpy(sub, &s[start], len);
+    return (sub);
+}*/

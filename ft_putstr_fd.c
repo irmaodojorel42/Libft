@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/02 10:41:24 by marvin            #+#    #+#             */
-/*   Updated: 2023/03/02 10:41:24 by marvin           ###   ########.fr       */
+/*   Created: 2023/03/13 14:04:10 by marvin            #+#    #+#             */
+/*   Updated: 2023/03/13 14:04:10 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memmove(void *dest, const void *src, size_t n)
+void    ft_putstr_fd(char *s, int fd)
 {
-	if (dest > src)
-	{
-		while (n > 0)
-		{
-			n--;
-			((char *)dest)[n] = ((char *)src)[n];
-		}
-	}
-	else
-		ft_memcpy(dest, src, n);
-	return (dest);
+    int i;
+
+    i = 0;
+    while (s[i] != '\0')
+        ft_putchar_fd(s[i++], fd);
 }
+
+/*int main(void)
+{
+    char    *x = "casa";
+
+    ft_putstr_fd(x, 1);
+    write(1, "\n", 1);
+    return (0);
+}*/
+
