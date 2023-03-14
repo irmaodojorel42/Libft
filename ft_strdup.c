@@ -25,10 +25,13 @@ char    *ft_strdup(const char *s)
 
 /*int main(void)
 {
-    const char  *a = "sopa de galinha";
+    const char  *a = "irmao do jorel";
     char    *result;
 
     result = ft_strdup(a);
-    printf(":%s:\n", result);
+    printf("%s\n", result);
+    printf("%p\n", result);
+    printf("%p\n", a);
+    
     return (0);
 }*/

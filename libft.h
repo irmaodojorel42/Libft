@@ -16,6 +16,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdio.h>
 
 int ft_isalnum(int c);
 int ft_isalpha(int c);
@@ -37,6 +38,7 @@ char    *ft_strdup(const char *s);
 char    *ft_strchr(const char *s, int c);
 char    *ft_strrchr(const char *s, int c);
 char    *ft_strjoin(char const *s1, char const *s2);
+char    *ft_strtrim(char const *s1, char const *set);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
 char    *ft_strnstr(const char	*big, const char *little, size_t len);
 
