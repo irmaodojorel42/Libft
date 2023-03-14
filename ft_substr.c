@@ -10,15 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include "libft.h"
+#include "libft.h"
 
 char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
     char    *sub;
+    size_t i;
 
-    sub = malloc(ft_strlen(s) - start + 1);
+    i = (ft_strlen(s) - start);
+    if (i <= len)
+        sub = malloc(i + 1);
+    else
+        sub = malloc(len + 1);
     if (sub == NULL)
         return (NULL);
     ft_memcpy(sub, &s[start], len);
     return (sub);
+}
+
+/*int main(void)
+{
+    const char    *s = "irmao do jorel";
+
+    printf("%s\n", ft_substr(s, 9, 5));
+    return(0);
 }*/
