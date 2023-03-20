@@ -28,8 +28,22 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     return (str);
 }
 
-/*int main(void)
-{   
-    ft_strmapi("dia", ft_putchar_fd());
-    return (0);
+/*char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+
+int main(void)
+{
+    char *result;
+    const char *input = "Hello World!";
+    
+    result = ft_strmapi(input, &ft_myfunc);
+    if (result != NULL)
+    {
+        printf("Input string: %s\n", input);
+        printf("Output string: %s\n", result);
+        free(result);
+    }
+    else
+		printf("Error: ft_strmapi returned NULL\n");
+    
+    return 0;
 }*/
