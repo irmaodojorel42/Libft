@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/02 10:04:27 by marvin            #+#    #+#             */
-/*   Updated: 2023/03/02 10:04:27 by marvin           ###   ########.fr       */
+/*   Created: 2023/03/15 16:44:52 by marvin            #+#    #+#             */
+/*   Updated: 2023/03/15 16:44:52 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memcpy(void *dest, const void *src, size_t n)
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    char    *d;
-    const char  *s;
     int i;
+    char    *str;
 
     i = 0;
-    d = (char *)dest;
-    s = (const char *)src;
-    while (n > 0)
+    str = malloc(sizeof(char) * (ft_strlen(s) + 1));
+    while (s[i] != '\0')
     {
-        d[i] = s[i];
+        str[i] = f(i, s[i]);
         i++;
-        n--;
     }
-    return (dest);
+    str[i] = '\0';
+    return (str);
 }
 
 /*int main(void)
-{
-    char    dst[20];
-    const char  *src = "irmao do jorel 42";
-
-    ft_memcpy(dst, src, 17);
-    printf("%s\n", dst);
+{   
+    ft_strmapi("dia", ft_putchar_fd());
     return (0);
 }*/

@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 run:
-	gcc -Wall -Werror -Wextra ft_*.c libft.h main.c -o result
+	gcc -g -Wall -Werror -Wextra ft_*.c libft.h main.c -o result
 
 clean:
 	rm -f result

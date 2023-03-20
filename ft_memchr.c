@@ -28,15 +28,13 @@ void    *ft_memchr(const void *s, int c, size_t n)
     return (NULL);
 }
 
-/*#include <stdio.h>
-#include "libft.h"
-
-int main(void)
+/*int main(void)
 {
-    char    s[50] = "celsormneto@gmail.com";
+    char    s[50] = "esse é o irmao do jorel 42";
     char    *x;
 
-    x = ft_memchr(s, 's', 6);
+    x = ft_memchr(s, 's', 15);
     printf("%s\n", x);
+    printf("%p\n", ft_memchr(s, 'i', 5));
     return (0);
 }*/

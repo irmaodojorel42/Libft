@@ -63,13 +63,14 @@ char    *ft_strtrim(char const *s1, char const *set)
         }
         j = 0;
     }
+    result[c] = '\0';
     return (result);
 }
 
 /*int main(void)
 {
-    const char  *s1 = "ibrbmbabob bdbob bjbobrbeblb";
-    const char  *set = "b";
+    const char  *s1 = "zizzbrzbmbzabzozb bdzbzob bjzbobrzbeblzb 4bzz2b";
+    const char  *set = "zb";
     
     printf("%s\n", ft_strtrim(s1, set));
     return (0);
