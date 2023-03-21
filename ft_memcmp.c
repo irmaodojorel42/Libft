@@ -32,10 +32,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
     return (0);
 }
 
-/*#include <stdio.h>
-#include "libft.h"
-
-int main(void)
+/*int main(void)
 {
     const char  *s1 = "caSa";
     const char  *s2 = "casa";

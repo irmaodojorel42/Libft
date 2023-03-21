@@ -33,7 +33,7 @@ void    *ft_memchr(const void *s, int c, size_t n)
     char    s[50] = "esse é o irmao do jorel 42";
     char    *x;
 
-    x = ft_memchr(s, 's', 15);
+    x = ft_memchr(s, 'i', 15);
     printf("%s\n", x);
     printf("%p\n", ft_memchr(s, 'i', 5));
     return (0);

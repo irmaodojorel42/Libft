@@ -17,10 +17,7 @@ int ft_isprint(int c)
     return (0);
 }
 
-/*#include <stdio.h>
-#include "libft.h"
-
-int main(void)
+/*int main(void)
 {
     
     printf("print %d\n", ft_isprint(49));

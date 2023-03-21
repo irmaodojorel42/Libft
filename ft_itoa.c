@@ -16,25 +16,17 @@ int sizei(int n)
 {
     int i;
 
-    i = 0;
-        if (n < 0)
+    i = 1;
+    if (n < 0)
     {
         i++;
         n *= -1;
     }
-    if (n > 9)
-    {
-        while (n / 10 != 0)
-        {
-            n = n / 10;
-            i++; 
-        }
-    }
-    if (n >= 0 && n <= 9)
+    while (n != 0)
     {
         i++;
+        n = n / 10;
     }
-    i++;
     return(i);
 }
 
@@ -49,8 +41,8 @@ char    *ft_itoa(int n)
     char    *str;
     int i;
 
-    i = sizei(n);
-    str = malloc(i--);
+    i = (sizei(n));
+    str = malloc(sizeof(char) * (i--));
     if (str == NULL)
         return (NULL);
     str[i--] = '\0';
@@ -58,7 +50,7 @@ char    *ft_itoa(int n)
         return (mini(str));
     if (n < 0)
     {
-        str[0] = 45;
+        str[0] = '-';
         n *= -1;
     }
     while (n > 9)

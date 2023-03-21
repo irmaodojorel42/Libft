@@ -34,7 +34,7 @@ char    *word(char const *s, char *new, char c)
     int i;
 
     i = 0;
-    while (s[i] != c)
+    while (s[i] != c && s[i] != '\0')
         i++;
     new = malloc(sizeof(char) * i + 1);
     if (new == NULL)
@@ -51,29 +51,25 @@ char    **ft_split(char const *s, char c)
     int i;
     int w;
     char    **new;
-    int size;
 
-    size = (sizema(s, c) + 1);
-    new = (char **)malloc(sizeof(char *) * size);
-    i = -1;
-    w = 1;
-    while (s[++i] != '\0')
+    new = (char **)malloc(sizeof(char *) * (sizema(s, c) + 1));
+    if (new == NULL)
+        return(NULL);
+    i = 0;
+    w = 0;
+    while (s[i] != '\0')
     {   
         if(s[i] != c)
         {   
             new[w] = word(&s[i], new[w], c);
             w++;
-            while (s[i] != c)
+            while (s[i] != c && s[i] != '\0')
                 i++;
         }
         else
-        {
-            while(s[i] == c)
-                i++;
-        }
-        i--;
+            i++;
     }
-    new[size] = '\0';
+    new[w] = '\0';
     return (new);
 }
 
@@ -84,11 +80,10 @@ char    **ft_split(char const *s, char c)
 
     result = ft_split(s, '@');
     printf("%p\n", result);
+    printf("%s\n", result[0]);
     printf("%s\n", result[1]);
     printf("%s\n", result[2]);
     printf("%s\n", result[3]);
-    printf("%s\n", result[4]);
-    printf("%p\n", result[5]);
-    printf("%p\n", result[6]);
+    printf("%p\n", result[4]);
     return (0);
 }*/

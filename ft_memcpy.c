@@ -30,7 +30,8 @@ void    *ft_memcpy(void *dest, const void *src, size_t n)
     return (dest);
 }
 
-/*int main(void)
+/*
+int main(void)
 {
     char    dst[20];
     const char  *src = "irmao do jorel 42";

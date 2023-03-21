@@ -17,10 +17,7 @@ int ft_isalpha(int c)
     return (0);
 }
 
-/*#include <stdio.h>
-#include "libft.h"
-
-int main(void)
+/*int main(void)
 {
     printf("alp %d\n", ft_isalpha(122));
     printf("not alp %d\n", ft_isalpha(32));

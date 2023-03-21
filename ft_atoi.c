@@ -38,10 +38,7 @@ int ft_atoi(const char *src)
     return (n * s);
 }
 
-/*#include <stdio.h>
-#include "libft.h"
-
-int main(void)
+/*int main(void)
 {
     const char  *s1 = "         -1547asdfvr  ";
     const char  *s2 = "casa";

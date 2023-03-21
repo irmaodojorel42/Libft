@@ -23,6 +23,16 @@ void *ft_calloc(size_t nblock, size_t sizeblock)
     result = malloc(totalsize);
     if (result == NULL)
         return (NULL);
-    ft_memset(result, 0, totalsize);
+    ft_memset(result, '0', totalsize);
     return (result);
 }
+
+/*int main(void)
+{   
+    char    *result;
+
+    result = ft_calloc(5, 5);
+    printf("%p\n", result);
+    printf("%s\n", result);
+    return(0);
+}*/

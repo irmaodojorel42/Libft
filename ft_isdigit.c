@@ -17,10 +17,7 @@ int ft_isdigit(int c)
     return (0);
 }
 
-/*#include <stdio.h>
-#include "libft.h"
-
-int main(void)
+/*int main(void)
 {
     printf("dig %d\n", ft_isdigit(49));
     printf("not dig %d\n", ft_isdigit(32));

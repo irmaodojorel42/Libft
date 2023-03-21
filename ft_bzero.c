@@ -27,10 +27,7 @@ void    *ft_bzero(void *s, size_t n)
     return (0);
 }
 
-/*#include <stdio.h>
-#include "libft.h"
-
-int main(void)
+/*int main(void)
 {
     char    c[50] = "casa amarela";
     int i;

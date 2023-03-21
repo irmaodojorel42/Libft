@@ -19,10 +19,7 @@ int ft_isalnum(int c)
     return (0);
 }
 
-/*#include <stdio.h>
-#include "libft.h"
-
-int main(void)
+/*int main(void)
 {
     printf("alp %d\n", ft_isalnum(122));
     printf("num %d\n", ft_isalnum(49));
