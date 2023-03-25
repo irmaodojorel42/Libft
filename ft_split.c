@@ -13,7 +13,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int sizema(const char *s, char c)
+static int sizema(const char *s, char c)
 {
     int i;
     int size;
@@ -29,7 +29,7 @@ int sizema(const char *s, char c)
     return (size);
 }
 
-char    *word(char const *s, char *new, char c)
+static char    *word(char const *s, char *new, char c)
 {
     int i;
 

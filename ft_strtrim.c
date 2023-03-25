@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int sizem(char const *s1, char const *set, int i, int j)
+static int sizem(char const *s1, char const *set, int i, int j)
 {
     int size;
 

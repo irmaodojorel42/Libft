@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int sizei(int n)
+static int sizei(int n)
 {
     int i;
 
@@ -30,7 +30,7 @@ int sizei(int n)
     return(i);
 }
 
-char    *mini(char *str)
+static char    *mini(char *str)
 {
     str = "-2147483648";
     return (str);
