@@ -25,10 +25,7 @@ size_t  ft_strlcat(char *dst, const char *src, size_t size)
     return (i);
 }
 
-/*#include <stdio.h>
-#include "libft.h"
-
-int main(void)
+/*int main(void)
 {
     char    dst[20] = "casa";
     const char  *src = "amarela";

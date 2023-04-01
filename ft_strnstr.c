@@ -41,10 +41,7 @@ char	*ft_strnstr(const char *str, const char *find, size_t n)
 
 
 
-/*#include <stdio.h>
-#include "libft.h"
-
-int main(void)
+/*int main(void)
 {
     const char *src = "uma bela casa";
     const char *find = "bela";

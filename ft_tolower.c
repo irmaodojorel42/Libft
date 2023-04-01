@@ -19,10 +19,7 @@ int ft_tolower(int c)
     return (c);
 }
 
-/*#include <stdio.h>
-#include "libft.h"
-
-int main(void)
+/*int main(void)
 {
     printf("converse: %c\n", ft_tolower('A'));
     printf("not converse: %c\n", ft_tolower('5'));

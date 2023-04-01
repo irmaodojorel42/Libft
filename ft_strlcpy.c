@@ -26,10 +26,7 @@ size_t  ft_strlcpy(char *dst, const char *src, size_t size)
     return (ft_strlen(src));
 }
 
-/*#include <stdio.h>
-#include "libft.h"
-
-int main(void)
+/*int main(void)
 {
     char    dst[50];
     const char  *src = "casa amarela";

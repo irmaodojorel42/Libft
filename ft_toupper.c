@@ -19,10 +19,7 @@ int ft_toupper(int c)
     return (c);
 }
 
-/*#include <stdio.h>
-#include "libft.h"
-
-int main(void)
+/*int main(void)
 {
     printf("converse: %c\n", ft_toupper('a'));
     printf("not converse: %c\n", ft_toupper('5'));

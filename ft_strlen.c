@@ -22,10 +22,7 @@ size_t  ft_strlen(const char *s)
     return (i);
 }
 
-/*#include <stdio.h>
-#include "libft.h"
-
-int main(void)
+/*int main(void)
 {
     const char *src = "casa";
 

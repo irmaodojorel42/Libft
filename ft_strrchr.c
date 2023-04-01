@@ -26,9 +26,7 @@ char    *ft_strrchr(const char *s, int c)
     return (0);
 }
 
-/*#include <stdio.h>
-#include "libft.h"
-
+/*
 int main(void)
 {
     const char  *s = "casaco";
