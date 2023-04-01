@@ -22,10 +22,9 @@ static int sizema(const char *s, char c)
     size = 0;
     while(s[++i] != '\0')
     {
-        if (s[i] == c)
+        if ((s[i] != c) && (s[i + 1] == c || s[i + 1] == '\0'))
             size++;
     }
-    size = i - size;
     return (size);
 }
 
