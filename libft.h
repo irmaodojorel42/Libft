@@ -16,7 +16,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <stdio.h>
 
 int ft_isalnum(int c);
 int ft_isalpha(int c);
