@@ -49,7 +49,7 @@ char    *ft_strtrim(char const *s1, char const *set)
     i = -1;
     j = 0;
     c = 0;
-    result = malloc(sizem(s1, set, c, j) + 1);
+    result = malloc(sizeof(char) * (sizem(s1, set, c, j) + 1));
     while(s1[++i] != '\0')
     {
         while (s1[i] != set[j])

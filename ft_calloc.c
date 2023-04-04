@@ -20,7 +20,7 @@ void *ft_calloc(size_t nblock, size_t sizeblock)
     totalsize = sizeblock * nblock;
     if (nblock == 0 || sizeblock == 0)
         return (NULL);
-    result = malloc(totalsize);
+    result = malloc(sizeof(size_t) * totalsize);
     if (result == NULL)
         return (NULL);
     ft_memset(result, '0', totalsize);

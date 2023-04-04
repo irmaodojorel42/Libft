@@ -11,18 +11,14 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int main(void)
-{
-    char const  *s = "@irmao@do@jorel@42";
-    char    **result;
+{   
+    char    *result;
 
-    result = ft_split(s, '@');
+    result = ft_calloc(5, 5);
     printf("%p\n", result);
-    printf("%s\n", result[0]);
-    printf("%s\n", result[1]);
-    printf("%s\n", result[2]);
-    printf("%s\n", result[3]);
-    printf("%p\n", result[4]);
-    return (0);
+    printf("%s\n", result);
+    return(0);
 }

@@ -19,9 +19,9 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
 
     i = (ft_strlen(s) - start);
     if (i <= len)
-        sub = malloc(i + 1);
+        sub = malloc(sizeof(char) * (i + 1));
     else
-        sub = malloc(len + 1);
+        sub = malloc(sizeof(char) * (len + 1));
     if (sub == NULL)
         return (NULL);
     ft_memcpy(sub, &s[start], len);
