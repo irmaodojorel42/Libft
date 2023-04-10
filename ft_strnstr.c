@@ -38,9 +38,6 @@ char	*ft_strnstr(const char *str, const char *find, size_t n)
 	return (0);
 }
 
-
-
-
 /*int main(void)
 {
     const char *src = "uma bela casa";

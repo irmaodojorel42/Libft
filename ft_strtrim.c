@@ -12,59 +12,59 @@
 
 #include "libft.h"
 
-static int sizem(char const *s1, char const *set, int i, int j)
+static int	sizem(char const *s1, char const *set, int i, int j)
 {
-    int size;
+	int	size;
 
-    size = 0;
-    while (s1[i] != '\0')
-    {
-        while (set[j] != '\0')
-        {
-            if (s1[i] != set[j])
-            {
-                j++;
-                if (set[j] == '\0')
-                {
-                    size++;
-                    break;
-                }
-            }
-            else if (s1[i] == set[j])
-                break;
-        }
-        i++;
-        j = 0;
-    }
-    return (size);
+	size = 0;
+	while (s1[i] != '\0')
+	{
+		while (set[j] != '\0')
+		{
+			if (s1[i] != set[j])
+			{
+				j++;
+				if (set[j] == '\0')
+				{
+					size++;
+					break;
+				}
+			}
+			else if (s1[i] == set[j])
+				break;
+		}
+		i++;
+		j = 0;
+	}
+	return (size);
 }
 
-char    *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-    int i;
-    int j;
-    int c;
-    char    *result;
+	int	i;
+	int	j;
+	int	c;
+	char	*result;
 
-    i = -1;
-    j = 0;
-    c = 0;
-    result = malloc(sizeof(char) * (sizem(s1, set, c, j) + 1));
-    while(s1[++i] != '\0')
-    {
-        while (s1[i] != set[j])
-        {
-            j++;
-            if (set[j] == '\0')
-            {
-                result[c++] = s1[i];
-                break;
-            }
-        }
-        j = 0;
-    }
-    result[c] = '\0';
-    return (result);
+	i = -1;
+	j = 0;
+	c = 0;
+	result = malloc(sizeof(char) * (sizem(s1, set, c, j) + 1));
+	while(s1[++i] != '\0')
+	{
+		while (s1[i] != set[j])
+		{
+			j++;
+			if (set[j] == '\0')
+			{
+				result[c++] = s1[i];
+				break;
+			}
+		}
+		j = 0;
+	}
+	result[c] = '\0';
+	return (result);
 }
 
 /*int main(void)

@@ -12,20 +12,20 @@
 
 #include "libft.h"
 
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char    *sub;
-    size_t i;
+	char	*sub;
+	size_t	i;
 
-    i = (ft_strlen(s) - start);
-    if (i <= len)
-        sub = malloc(sizeof(char) * (i + 1));
-    else
-        sub = malloc(sizeof(char) * (len + 1));
-    if (sub == NULL)
-        return (NULL);
-    ft_memcpy(sub, &s[start], len);
-    return (sub);
+	i = (ft_strlen(s) - start);
+	if (i <= len)
+		sub = malloc(sizeof(char) * (i + 1));
+	else
+		sub = malloc(sizeof(char) * (len + 1));
+	if (sub == NULL)
+		return (NULL);
+	ft_memcpy(sub, &s[start], len);
+	return (sub);
 }
 
 /*int main(void)

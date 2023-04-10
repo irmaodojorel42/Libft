@@ -12,55 +12,61 @@
 
 #include "libft.h"
 
-static int sizei(int n)
+static int	sizei(int n)
 {
-    int i;
+	int	i;
 
-    i = 1;
-    if (n < 0)
-    {
-        i++;
-        n *= -1;
-    }
-    while (n != 0)
-    {
-        i++;
-        n = n / 10;
-    }
-    return(i);
+	if (n == 0)
+		return (2);
+	if (n == -2147483648)
+		return (12);
+	i = 1;
+	if (n < 0)
+	{
+		i++;
+		n *= -1;
+	}
+	while (n != 0)
+	{
+		i++;
+		n = n / 10;
+	}
+	return (i);
 }
 
-static char    *mini(char *str)
+static char	*mini(int n)
 {
-    str = "-2147483648";
-    return (str);
+	if (n == 0)
+		return ("0");
+	else
+		return ("-2147483648");
 }
 
-char    *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-    char    *str;
-    int i;
+	char	*str;
+	int		i;
 
-    i = (sizei(n));
-    str = malloc(sizeof(char) * (i--));
-    if (str == NULL)
-        return (NULL);
-    str[i--] = '\0';
-    if (n == -2147483648)
-        return (mini(str));
-    if (n < 0)
-    {
-        str[0] = '-';
-        n *= -1;
-    }
-    while (n > 9)
-    {
-        str[i--] = (n % 10 + '0');
-        n = n / 10;
-    }
-    if (n >= 0 && n <= 9)
-        str[i] = (n + '0');
-    return (str);
+	i = (sizei(n));
+	str = malloc(sizeof(char) * (i--));
+	if (str == NULL)
+		return (NULL);
+	str[i--] = '\0';
+	if (n == -2147483648 || n == 0)
+		return (mini(n));
+	if (n < 0)
+	{
+		str[0] = '-';
+		n *= -1;
+	}
+	while (n > 9)
+	{
+		str[i--] = (n % 10 + '0');
+		n = n / 10;
+	}
+	if (n >= 0 && n <= 9)
+		str[i] = (n + '0');
+	return (str);
 }
 
 /*int main(void)

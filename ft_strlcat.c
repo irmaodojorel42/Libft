@@ -10,19 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*strlcat faz a concatenação de src em dst, tendo como quantidade
+maxima size caracteres, caso len de dst seja maior que size o retorno
+é a len de src + size, do contrario o return é o tamanho total de dst
+e src concatenados*/
+
 #include "libft.h"
 
-size_t  ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-    size_t  i;
-    size_t  j;
+	size_t	i;
+	size_t	j;
 
-    i = ft_strlen(dst);
-    j = 0;
-    while (src[j] && j < size)
-        dst[i++] = src[j++];
-    dst[i] = '\0';
-    return (i);
+	if (size <= ft_strlen(dst))
+		return(size + ft_strlen(src));
+	i = ft_strlen(dst);
+	j = 0;
+	while (src[j] != '\0' && (i + 1) < size)
+		dst[i++] = src[j++];
+	dst[i] = '\0';
+	return (i + ft_strlen(&src[j]));
 }
 
 /*int main(void)

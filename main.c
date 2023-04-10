@@ -13,12 +13,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-int main(void)
-{   
-    char    *result;
-
-    result = ft_calloc(5, 5);
-    printf("%p\n", result);
-    printf("%s\n", result);
-    return(0);
+int	main(void)
+{
+	return (0);
 }
