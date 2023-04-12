@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+/*write(fd, ft_itoa(nb), ft_strlen(ft_itoa(nb)))*/
+
 void	ft_putnbr_fd(int nb, int fd)
 {
 	if (nb == -2147483648)

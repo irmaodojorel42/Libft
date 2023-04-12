@@ -44,12 +44,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int	i;
 	int	j;
 	int	c;
-	char	*result;
+	char	*dest;
 
 	i = -1;
 	j = 0;
 	c = 0;
-	result = malloc(sizeof(char) * (sizem(s1, set, c, j) + 1));
+	dest = malloc(sizeof(char) * (sizem(s1, set, c, j) + 1));
+	if (dest == NULL)
+		return (NULL);
+	if (set[j] == 0 && s1[j] != '\0')
+	{
+		dest = ft_strdup(s1);
+		return (dest);
+	}
 	while(s1[++i] != '\0')
 	{
 		while (s1[i] != set[j])
@@ -57,14 +64,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 			j++;
 			if (set[j] == '\0')
 			{
-				result[c++] = s1[i];
+				dest[c++] = s1[i];
 				break;
 			}
 		}
 		j = 0;
 	}
-	result[c] = '\0';
-	return (result);
+	dest[c] = '\0';
+	return (dest);
 }
 
 /*int main(void)

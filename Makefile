@@ -46,4 +46,4 @@ re:	fclean all
 
 run:	re
 		rm -f result
-		$(CC) -o result main.c -L. -lft
+		$(CC) $(FLAGS) -o result main.c -L. -lft

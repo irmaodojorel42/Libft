@@ -36,7 +36,7 @@ static int	sizei(int n)
 
 static char	*mini(int n)
 {
-	if (n == 0)
+	if (n == ((char)48))
 		return ("0");
 	else
 		return ("-2147483648");
@@ -48,13 +48,13 @@ char	*ft_itoa(int n)
 	int		i;
 
 	i = (sizei(n));
-	str = malloc(sizeof(char) * (i--));
+	str = (char *)malloc(sizeof(char) * (i--));
 	if (str == NULL)
 		return (NULL);
 	str[i--] = '\0';
-	if (n == -2147483648 || n == 0)
-		return (mini(n));
-	if (n < 0)
+	if (n == -2147483648 || n == ((char)48))
+		str = mini(n);
+	else if (n < 0)
 	{
 		str[0] = '-';
 		n *= -1;
