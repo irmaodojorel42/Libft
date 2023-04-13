@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    MakeFile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
+#    By: ceribeir <ceribeir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/02/27 22:01:06 by marvin            #+#    #+#              #
-#    Updated: 2023/02/27 22:01:06 by marvin           ###   ########.fr        #
+#    Created: 2023/04/13 20:35:40 by ceribeir          #+#    #+#              #
+#    Updated: 2023/04/13 20:35:40 by ceribeir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ SRCO = $(SRC:.c=.o)
 CME = ar -rcs
 
 $(NAME):	$(SRCO)
-		$(CME) $(NAME) $(SRCO)
+			$(CME) $(NAME) $(SRCO)
 
 all:	$(NAME)
 
@@ -40,7 +40,7 @@ clean:
 		$(RM) $(SRCO)
 
 fclean:	clean
-			$(RM) $(NAME)
+		$(RM) $(NAME)
 
 re:	fclean all
 

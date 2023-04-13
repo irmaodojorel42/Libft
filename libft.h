@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ceribeir <ceribeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/01 11:17:26 by marvin            #+#    #+#             */
-/*   Updated: 2023/03/01 11:17:26 by marvin           ###   ########.fr       */
+/*   Created: 2023/04/13 20:35:29 by ceribeir          #+#    #+#             */
+/*   Updated: 2023/04/13 20:35:29 by ceribeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,16 @@
 
 /********************FUNCTIONS_INT_TYPE********************/
 
-int	ft_isalnum(int c);
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
-int	ft_tolower(int c);
-int	ft_toupper(int c);
-int	ft_atoi(const char *src);
-int	ft_memcmp(const void *s1, const void *s2, size_t n);
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_isalnum(int c);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
+int		ft_atoi(const char *src);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 /********************FUNCTIONS_SIZE_T_TYPE********************/
 

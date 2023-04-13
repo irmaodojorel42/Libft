@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ceribeir <ceribeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/13 15:05:52 by marvin            #+#    #+#             */
-/*   Updated: 2023/03/13 15:05:52 by marvin           ###   ########.fr       */
+/*   Created: 2023/04/13 20:30:27 by ceribeir          #+#    #+#             */
+/*   Updated: 2023/04/13 20:30:27 by ceribeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 static int	sizei(long int l)
@@ -45,9 +44,9 @@ static void	ft_converter(char *str, int len, long num)
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		i;
+	char		*str;
 	long int	l;
+	int			i;
 
 	l = n;
 	i = (sizei(l));

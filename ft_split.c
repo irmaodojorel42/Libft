@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ceribeir <ceribeir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 16:14:20 by marvin            #+#    #+#             */
-/*   Updated: 2023/03/14 16:14:20 by marvin           ###   ########.fr       */
+/*   Created: 2023/04/13 20:33:01 by ceribeir          #+#    #+#             */
+/*   Updated: 2023/04/13 20:33:01 by ceribeir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ static char	*word(char const *s, char *new, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	int	i;
-	int	w;
+	int		i;
+	int		w;
 	char	**new;
 
 	new = (char **)malloc(sizeof(char *) * (sizema(s, c) + 1));
