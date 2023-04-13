@@ -10,62 +10,62 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
-static int	sizei(int n)
+static int	sizei(long int l)
 {
 	int	i;
 
-	if (n == 0)
-		return (2);
-	if (n == -2147483648)
-		return (12);
-	i = 1;
-	if (n < 0)
+	i = 0;
+	if (l == 0)
+		return (1);
+	if (l < 0)
 	{
 		i++;
-		n *= -1;
+		l *= -1;
 	}
-	while (n != 0)
+	while (l != 0)
 	{
 		i++;
-		n = n / 10;
+		l = l / 10;
 	}
 	return (i);
 }
 
-static char	*mini(int n)
+static void	ft_converter(char *str, int len, long num)
 {
-	if (n == ((char)48))
-		return ("0");
-	else
-		return ("-2147483648");
+	while (num > 0)
+	{
+		str[len] = 48 + (num % 10);
+		num /= 10;
+		len--;
+	}
 }
 
 char	*ft_itoa(int n)
 {
 	char	*str;
 	int		i;
+	long int	l;
 
-	i = (sizei(n));
-	str = (char *)malloc(sizeof(char) * (i--));
+	l = n;
+	i = (sizei(l));
+	str = (char *)malloc(i + 1);
 	if (str == NULL)
 		return (NULL);
 	str[i--] = '\0';
-	if (n == -2147483648 || n == ((char)48))
-		str = mini(n);
-	else if (n < 0)
+	if (l == 0)
+	{
+		str[0] = 48;
+		return (str);
+	}
+	else if (l < 0)
 	{
 		str[0] = '-';
-		n *= -1;
+		l *= -1;
 	}
-	while (n > 9)
-	{
-		str[i--] = (n % 10 + '0');
-		n = n / 10;
-	}
-	if (n >= 0 && n <= 9)
-		str[i] = (n + '0');
+	ft_converter(str, i, l);
 	return (str);
 }
 
