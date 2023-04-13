@@ -15,7 +15,7 @@
 
 int main()
 {
-    char *a = "aaaHelloaaa";
-    char *b = "a";
+    char *a = "lorem \n ipsum \t dolor \n sit \t amet";
+    char *b = " ";
     printf("%s\n", ft_strtrim(a, b));
 }
