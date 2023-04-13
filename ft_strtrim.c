@@ -12,73 +12,23 @@
 
 #include "libft.h"
 
-static int	sizem(char const *s1, char const *set, int i, int j)
-{
-	int	size;
-
-	size = 0;
-	while (s1[i] != '\0')
-	{
-		while (set[j] != '\0')
-		{
-			if (s1[i] != set[j])
-			{
-				j++;
-				if (set[j] == '\0')
-				{
-					size++;
-					break;
-				}
-			}
-			else if (s1[i] == set[j])
-				break;
-		}
-		i++;
-		j = 0;
-	}
-	return (size);
-}
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-	int	j;
-	int	c;
+	size_t	i;
 	char	*dest;
+	size_t	start;
+	size_t	end;
 
-	i = -1;
-	j = 0;
-	c = 0;
-	dest = malloc(sizeof(char) * (sizem(s1, set, c, j) + 1));
-	if (dest == NULL)
+	i = 0;
+	if (!s1)
 		return (NULL);
-	if (set[j] == 0 && s1[j] != '\0')
-	{
-		dest = ft_strdup(s1);
-		return (dest);
-	}
-	while(s1[++i] != '\0')
-	{
-		while (s1[i] != set[j])
-		{
-			j++;
-			if (set[j] == '\0')
-			{
-				dest[c++] = s1[i];
-				break;
-			}
-		}
-		j = 0;
-	}
-	dest[c] = '\0';
+	while (s1[i] && ft_strchr(set, s1[i]))
+		i++;
+	start = i;
+	i = ft_strlen(s1);
+	while (i > start && ft_strchr(set, s1[i - 1]))
+		i--;
+	end = i;
+	dest = ft_substr(s1, start, end - start);
 	return (dest);
 }
-
-/*int main(void)
-{
-    const char  *s1 = "zizzbrzbmbzabzozb bdzbzob bjzbobrzbeblzb 4bzz2b";
-    const char  *set = "zb";
-    
-    printf("%s\n", ft_strtrim(s1, set));
-    return (0);
-}*/

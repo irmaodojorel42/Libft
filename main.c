@@ -13,11 +13,9 @@
 #include "libft.h"
 #include <stdio.h>
 
-int main(void)
+int main()
 {
-    const char  *s1 = "zizzbrzbmbzabzozb bdzbzob bjzbobrzbeblzb 4bzz2b";
-    const char  *set = "";
-    
-    printf("%s\n", ft_strtrim(s1, set));
-    return (0);
+    char *a = "aaaHelloaaa";
+    char *b = "a";
+    printf("%s\n", ft_strtrim(a, b));
 }
