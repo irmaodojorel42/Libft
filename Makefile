@@ -10,13 +10,13 @@
 #                                                                              #
 # **************************************************************************** #
 
-.SILENT:
+# .SILENT:
 
 NAME = libft.a
 
-CC = gcc
+CC = cc
 
-FLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra
 
 RM = rm -f
 
@@ -27,7 +27,13 @@ SRC =	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen
 		ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_putchar_fd.c \
 		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_striteri.c
 
+SRC_B = 	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
+				ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
+				ft_lstclear.c ft_lstiter.c ft_lstmap.c
+
 SRCO = $(SRC:.c=.o)
+
+SRCO_B = $(SRC_B:.c=.o)
 
 CME = ar -rcs
 
@@ -44,6 +50,11 @@ fclean:	clean
 
 re:	fclean all
 
+bonus: $(SRCO_B)
+		$(CME) $(NAME) $(SRCO_B)
+
 run:	re
 		rm -f result
 		$(CC) $(FLAGS) -o result main.c -L. -lft
+
+.PHONY: all clean fclean re bonus run
